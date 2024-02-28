@@ -53,8 +53,8 @@ header{
 }
 .img{
     border-radius: 50%;
-    width:400px;
-    height: 400px;
+    width:360px;
+    height: 375px;
     float: left;
 }h1{
     display: inline-flex;
