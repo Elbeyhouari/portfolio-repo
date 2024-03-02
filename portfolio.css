@@ -46,7 +46,10 @@ header{
 }pre{
     position: relative;
     bottom: 10px;
-}.box1{
+}.container a:hover{
+    color: aliceblue;
+}
+.box1{
     position: relative;
     left: 300px;
     top: 20px;
@@ -135,4 +138,18 @@ header{
     top: 300px;
     margin-left: 50px;
     margin-right: 50px;
+}.main-ul li a:hover{
+    color: black;
+}
+@media (max-width:370px){
+    .img{
+        border-radius: 50%;
+        width:200px;
+        height: 200px;
+        float: left;
+    }.box1{
+        position: relative;
+    left: 0px;
+    top: 0px;
+    }
 }
