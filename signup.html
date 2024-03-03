@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Information</title>
+    <title>Creating Account</title>
     <style>
         body{
             background-image: url("./UpscaleImage_1_20240228.jpeg");
@@ -14,15 +14,15 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            top: 200px;
+            top: 150px;
             color: aliceblue;
         }fieldset{
             background-color: transparent;
             width:500px;
-            height: 400px;
+            height: 550px;
             padding: 20px;
             border-color: grey;
-            border-style:inset;
+            border-style: inset;
         }h2{
             font-size: xx-large;
             font-weight: 350;
@@ -32,22 +32,25 @@
             position: relative;
             top: 40px;
             margin-top: 10px;
+        }.name input{
+            width: 250px;
+            padding: 10px;
+        }.birthday input{
+            width: 250px;
+            padding: 10px;
+            text-align: center;
         }.username input{
             width: 250px;
             padding: 10px;
-        }.username > .start{
-            display: flex;
-            justify-content:space-around;
-            font-family: Arial;
-            font-size: larger;
         }.userpassword input{
             width: 250px;
             padding: 10px;
             border-color: transparent;
-        }.userpassword label{
-            font-family: Arial;
-            font-size: larger;
-        }button{
+        }.confirmpass input{
+            width: 250px;
+            padding: 10px;
+        }
+        button{
             background-color: rgba(12, 12, 243, 0.759);
             color: aliceblue;
             padding: 5px;
@@ -63,14 +66,8 @@
         }input:focus:valid{
             border: 3.7px solid green;
             color: black;
-        }p{
+        }.checkbox label{
             font-weight: 100;
-            position: relative;
-            top: 20px;
-        }a{
-            text-decoration: none;
-            color: orangered;
-            
         }button:hover{
             color: blanchedalmond;
         }
@@ -80,19 +77,29 @@
     <main>
         <div class="main">
             <fieldset>
-                <h2>Login information</h2>
-                <form action="./myportfolio.html" method="post">
+                <h2>Creating Account</h2>
+                <form action="./login.html" method="post">
                     <div class="Login">
+                        <div class="name">
+                            <input type="text" name="full name" placeholder="full name" required minlength="3"><br><br>
+                        </div>
+                        <div class="birthday">
+                            <input type="date" name="birthday" id="birthday" placeholder="day of birth" required><br><br>
+                        </div>
                         <div class="username">
-                            <input type="email" name="email" id="email" placeholder="enter your email address" required maxlength="41"><br><br><br>
+                            <input type="email" name="email" id="email" placeholder="enter your email address" required maxlength="41"><br><br>
                         </div>
                         <div class="userpassword">
                             <input type="password" name="passwd" id="passwd" placeholder="enter your password" required minlength="3" maxlength="30"><br><br>
                         </div>
-                        <div>
-                            <button type="submit">submit</button><br><br>
-                            <p>you don't have account ? <a href="./signup.html">create one here</a></p>
+                        <div class="confirmpass">
+                            <input type="password" required name="confirmpass" placeholder="confirm password"><br><br>
                         </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="agree" id="agree" required>
+                            <label for="agree">agree with terms and conditions</label><br><br> 
+                        </div>
+                        <button type="submit">submit</button><br><br>
                     </div>
                 </form>
             </fieldset>
